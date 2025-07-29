@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Namora comigo?</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+      background-color: #ffe6f0;
+    }
+    h1 {
+      font-size: 36px;
+      color: #ff3399;
+    }
+    #nao {
+      position: absolute;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+    #sim {
+      background-color: #ff66b2;
+      color: white;
+    }
+    #nao {
+      background-color: #999;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Namora comigo? 💖</h1>
+  <button id="sim" onclick="aceitou()">Sim 😍</button>
+  <button id="nao" onmouseover="fugir()">Não 😢</button>
+
+  <script>
+    function aceitou() {
+      alert("Eu te amo ❤️");
+    }
+
+    function fugir() {
+      let btn = document.getElementById("nao");
+      let largura = window.innerWidth - btn.offsetWidth;
+      let altura = window.innerHeight - btn.offsetHeight;
+      let novaEsquerda = Math.random() * largura;
+      let novoTopo = Math.random() * altura;
+
+      btn.style.left = novaEsquerda + "px";
+      btn.style.top = novoTopo + "px";
+    }
+  </script>
+
+</body>
+</html>
